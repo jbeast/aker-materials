@@ -1,0 +1,56 @@
+2016-11-22 10:27:33,797 ERROR: cannot concatenate 'str' and 'ObjectId' objects [in patch.py:239] -- ip: 127.0.0.1, url: http://localhost:5000/materials/582482eeb87a730fa657357a, method:PATCH
+Traceback (most recent call last):
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/eve/methods/patch.py", line 219, in patch_internal
+    getattr(app, "on_updated_%s" % resource)(updates, original)
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "run.py", line 30, in after_materials_update
+    print('aker.set.' + set_id + '.materials')
+TypeError: cannot concatenate 'str' and 'ObjectId' objects
+2016-11-22 10:32:46,620 ERROR: local variable 'set_id' referenced before assignment [in patch.py:239] -- ip: 127.0.0.1, url: http://localhost:5000/materials/582482eeb87a730fa657357a, method:PATCH
+Traceback (most recent call last):
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/eve/methods/patch.py", line 219, in patch_internal
+    getattr(app, "on_updated_%s" % resource)(updates, original)
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "run.py", line 31, in after_materials_update
+    set_key = 'aker.set.' + str(set_id) + '.materials'
+UnboundLocalError: local variable 'set_id' referenced before assignment
+2016-11-22 10:41:26,987 ERROR: global name 'request' is not defined [in patch.py:239] -- ip: 127.0.0.1, url: http://localhost:5000/materials/582482eeb87a730fa657357a, method:PATCH
+Traceback (most recent call last):
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/eve/methods/patch.py", line 219, in patch_internal
+    getattr(app, "on_updated_%s" % resource)(updates, original)
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "run.py", line 23, in after_materials_update
+    print(request)
+NameError: global name 'request' is not defined
+2016-11-22 10:44:46,780 ERROR: global name 'g' is not defined [in patch.py:239] -- ip: 127.0.0.1, url: http://localhost:5000/materials/582482eeb87a730fa657357a, method:PATCH
+Traceback (most recent call last):
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/eve/methods/patch.py", line 219, in patch_internal
+    getattr(app, "on_updated_%s" % resource)(updates, original)
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "run.py", line 23, in after_materials_update
+    print(g)
+NameError: global name 'g' is not defined
+2016-11-22 10:49:07,821 ERROR: '_AppCtxGlobals' object has no attribute 'keys' [in patch.py:239] -- ip: 127.0.0.1, url: http://localhost:5000/materials/582482eeb87a730fa657357a, method:PATCH
+Traceback (most recent call last):
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/eve/methods/patch.py", line 219, in patch_internal
+    getattr(app, "on_updated_%s" % resource)(updates, original)
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "run.py", line 24, in after_materials_update
+    print(g.keys())
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'keys'
+2016-11-22 11:19:17,784 ERROR: global name 'added' is not defined [in patch.py:239] -- ip: 127.0.0.1, url: http://localhost:5000/materials/582482eeb87a730fa657357a, method:PATCH
+Traceback (most recent call last):
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/eve/methods/patch.py", line 219, in patch_internal
+    getattr(app, "on_updated_%s" % resource)(updates, original)
+  File "/Users/cs24/projects/aker/eve_materials/venv/lib/python2.7/site-packages/events/events.py", line 77, in __call__
+    f(*a, **kw)
+  File "run.py", line 32, in after_materials_update
+    for set_id in added:
+NameError: global name 'added' is not defined

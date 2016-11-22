@@ -7,7 +7,7 @@ tableName = db[tableName];
 
 var documentNumber = n;
 
-var batchNumber = 5 * 1000;
+var batchNumber = 1000;
 
 var start = new Date();
 
